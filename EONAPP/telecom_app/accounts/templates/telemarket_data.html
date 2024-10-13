@@ -1,0 +1,6 @@
+<h2>Telemarketer Data Form</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
