@@ -46,7 +46,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')  # Redirect to a home page after login
+            return redirect('telemarket_data')  # Redirect to a home page after login
         else:
             errors.append('Invalid username or password')
 
@@ -78,10 +78,6 @@ def success(request):
 
 def home(request):
     return render(request, 'index.html')
-
-def home(request):
-  template = loader.get_template('index.html')
-  return HttpResponse(template.render())
 
 
 
